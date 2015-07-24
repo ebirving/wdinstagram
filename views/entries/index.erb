@@ -1,0 +1,6 @@
+
+<% @entries.each do |entry| %>
+  <h3><%= entry.author%></h3>
+  <img src = "<%= entry.photo_url %>">
+  <p><%= entry.date_taken %></p>
+<% end %>

@@ -26,7 +26,11 @@ Your app should have the following RESTful actions:
 ### Instructions
 
 1. Write 5 user stories for your app.
-  * Keep it simple and think about what functionality your MVP needs.
+  * As a user I would like to upload a photo
+  * As a user I would like to see all my photos
+  * As a user I would like to delete a photo
+  * As a user I would like to edit or change a photo
+  * As a user I would like to view a single photo
 2. Create a database: `$ createdb wdinstagram`
 3. Create an Entry model
 4. Create a `wdinstagram_schema.sql` schema file and generate a table for your Entry model.

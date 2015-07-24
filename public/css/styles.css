@@ -9,11 +9,10 @@ body {
 
 img.entry_photo {
   width: 400px;
-  margin-bottom: 50px;
 }
 
 h3 {
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
 }
 
 h4 {

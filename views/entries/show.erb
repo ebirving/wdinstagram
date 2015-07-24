@@ -2,6 +2,7 @@
 <h3><%= @entry.author%></h3>
 <h4><%= @entry.date_taken %></h4>
 <img class="entry_photo" src = "<%= @entry.photo_url %>">
+<p><%= @entry.caption %></p>
 
 <form method="post" action="/<%= @entry.id %>">
   <input type="hidden" name="_method" value="delete">

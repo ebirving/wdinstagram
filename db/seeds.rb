@@ -3,6 +3,7 @@ require "pry"
 
 require_relative "../db/connection"
 require_relative "../models/entry"
+require_relative "../models/comment"
 
 Entry.destroy_all
 
@@ -11,3 +12,9 @@ Entry.create(author: "Erica", photo_url: "http://www.stevensegallery.com/500/500
 Entry.create(author: "Alex", photo_url: "http://www.stevensegallery.com/345/350", date_taken: 'August 14, 2015', caption: "Alex at the beach")
 Entry.create(author: "Erica", photo_url: "http://www.stevensegallery.com/300/300", date_taken: 'April 9, 2012', caption: "Alex at the beach")
 Entry.create(author: "Alex", photo_url: "http://www.stevensegallery.com/200/400", date_taken: 'May 4, 1977', caption: "Alex at the beach")
+
+Comment.create(commenter: "Bill Cosby", content: "Jello pudding pops. Also, I'm sorry...", entry_id: Entry.first.id)
+Comment.create(commenter: "Bill Cosby", content: "Jello pudding pops. Also, I'm sorry...", entry_id: Entry.all[1].id)
+Comment.create(commenter: "Bill Cosby", content: "Jello pudding pops. Also, I'm sorry...", entry_id: Entry.all[2].id)
+Comment.create(commenter: "Bill Cosby", content: "Jello pudding pops. Also, I'm sorry...", entry_id: Entry.all[3].id)
+Comment.create(commenter: "Bill Cosby", content: "Jello pudding pops. Also, I'm sorry...", entry_id: Entry.last.id)

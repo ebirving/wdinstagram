@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS entries;
+DROP TABLE IF EXISTS comments;
 
 CREATE TABLE entries(
   id SERIAL PRIMARY KEY,
@@ -7,3 +8,10 @@ CREATE TABLE entries(
   date_taken TEXT,
   caption TEXT
 );
+
+CREATE TABLE comments(
+  id SERIAL PRIMARY KEY,
+  entry_id INT,
+  commenter TEXT,
+  content TEXT
+)

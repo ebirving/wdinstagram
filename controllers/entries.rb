@@ -14,6 +14,7 @@ end
 
 get '/:id' do
   @entry = Entry.find(params[:id])
+  @comments = Comment.where(entry_id: @entry.id)
   erb :"entries/show"
 end
 
@@ -26,6 +27,11 @@ end
 post '/new' do
   @entry = Entry.create(params[:entry])
   redirect "/#{@entry.id}"
+end
+
+post '/:id' do
+  @comment = Comment.create(params[:comment])
+  redirect "/#{params[:id]}"
 end
 
 delete '/:id' do

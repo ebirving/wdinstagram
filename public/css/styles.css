@@ -24,10 +24,6 @@ a {
   color: black;
 }
 
-.title:hover {
-  background-color: white;
-}
-
 .user_action {
   font-size: 2em;
   margin-bottom: 30px;
@@ -41,4 +37,25 @@ input[type=text] {
 
 input[type=submit] {
   width: 100px;
+}
+
+#delete {
+  background-color: red;
+  margin: 30px auto;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 150px
+}
+
+.entry_photo {
+  border: 10px solid mediumaquamarine;
+  border-right: 10px solid rgb(87, 255, 154);
+  border-bottom: 10px solid rgb(87, 255, 154);
+
+}
+#commenter_area {
+  margin: 15px auto;
+}
+.caption {
+  margin-bottom: 35px;
 }

@@ -1,10 +1,27 @@
-<p class="user_action"><a href="<%= @entry.id %>/edit">Edit This Photo</a></p>
+<p class="user_action"><a href="/<%= @entry.id %>/edit">Edit This Photo</a></p>
+
 <h3><%= @entry.author%></h3>
 <h4><%= @entry.date_taken %></h4>
 <img class="entry_photo" src = "<%= @entry.photo_url %>">
-<p><%= @entry.caption %></p>
+<p class="caption"><%= @entry.caption %></p>
+
+<% @comments.each do |comment| %>
+  <h3 id="commenter_area">
+    <a href="/<%= @entry.id %>/<%=comment.id%>/edit">
+      (-)
+    </a>
+    <%= comment.commenter%>: <%= comment.content%>
+  </h3>
+<% end %>
+
+<form method="post" action="/<%= @entry.id %>">
+  <input type="hidden" name="comment[entry_id]" value="<%= @entry.id %>">
+  <input  type="text" name="comment[commenter]" placeholder="Name">
+  <input type="text" name="comment[content]" placeholder="Comment here">
+  <input type="submit" value="Comment">
+</form>
 
 <form method="post" action="/<%= @entry.id %>">
   <input type="hidden" name="_method" value="delete">
-  <input type="submit" value="Delete">
+  <input id="delete" type="submit" value="Delete">
 </form>

@@ -1,0 +1,11 @@
+<h2>Edit This Photo</h2>
+<form method="post" action="/<%= @entry.id %>">
+  <input type="hidden" name="_method" value="put">
+  <label>Author:</label>
+  <input type="text" name="entry[author]" value="<%= @entry.author%>">
+  <label>Photo URL:</label>
+  <input type="text" name="entry[photo_url]" value="<%= @entry.photo_url%>">
+  <label>Date Taken:</label>
+  <input type="text" name="entry[date_taken]" value="<%= @entry.date_taken%>">
+  <input type="submit">
+</form>

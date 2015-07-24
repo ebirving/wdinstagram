@@ -1,6 +1,7 @@
+<p class="user_action"><a href="/new">Add a Photo</a></p>
 
 <% @entries.each do |entry| %>
   <h3><%= entry.author%></h3>
-  <img src = "<%= entry.photo_url %>">
-  <p><%= entry.date_taken %></p>
+  <h4><%= entry.date_taken %></h4>
+  <a href="/<%= entry.id %>"><img class="entry_photo" src = "<%= entry.photo_url %>"></a>
 <% end %>

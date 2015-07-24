@@ -1,0 +1,9 @@
+<p class="user_action"><a href="<%= @entry.id %>/edit">Edit This Photo</a></p>
+<h3><%= @entry.author%></h3>
+<h4><%= @entry.date_taken %></h4>
+<img class="entry_photo" src = "<%= @entry.photo_url %>">
+
+<form method="post" action="/<%= @entry.id %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
